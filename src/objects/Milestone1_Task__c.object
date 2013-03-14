@@ -36,7 +36,7 @@
     <description>Force.com Labs - PM - An activity that has hours, budget, and is assigned to a User.</description>
     <enableActivities>false</enableActivities>
     <enableEnhancedLookup>false</enableEnhancedLookup>
-    <enableFeeds>true</enableFeeds>
+    <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
     <fields>
@@ -48,7 +48,6 @@
         <referenceTo>User</referenceTo>
         <relationshipName>Project_Tasks_Assigned</relationshipName>
         <required>false</required>
-        <trackFeedHistory>true</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -58,7 +57,6 @@
         <label>Reason</label>
         <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -68,7 +66,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Is this task blocked for some reason?</inlineHelpText>
         <label>Blocked</label>
-        <trackFeedHistory>true</trackFeedHistory>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -91,7 +88,6 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -100,7 +96,6 @@
         <externalId>false</externalId>
         <inlineHelpText>The status of this task. A task is either in-complete or complete.</inlineHelpText>
         <label>Complete</label>
-        <trackFeedHistory>true</trackFeedHistory>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -123,7 +118,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -133,7 +127,6 @@
         <inlineHelpText>The general description of the task. For example, what is the purpose of the task.</inlineHelpText>
         <label>Description</label>
         <length>5000</length>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
     </fields>
@@ -143,7 +136,6 @@
         <inlineHelpText>The date this task is due to be completed. Defaults to milestone due date if left blank.</inlineHelpText>
         <label>Due Date</label>
         <required>false</required>
-        <trackFeedHistory>true</trackFeedHistory>
         <type>Date</type>
     </fields>
     <fields>
@@ -153,7 +145,6 @@
         <label>Email GUID</label>
         <length>150</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -165,7 +156,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
     </fields>
     <fields>
@@ -176,7 +166,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -211,7 +200,6 @@
         <label>Import ID</label>
         <length>18</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -230,7 +218,6 @@
         <label>Index</label>
         <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -241,7 +228,6 @@
         <inlineHelpText>The date the last email was attached to this task. A task can be created via an email, and additional emails can be attached to the task in the notes section.</inlineHelpText>
         <label>Last Email Received</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>DateTime</type>
     </fields>
     <fields>
@@ -291,7 +277,6 @@
         <label>Predecessor_Task_Import_Id__c</label>
         <length>18</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -305,7 +290,6 @@
         <relationshipLabel>Successor Tasks</relationshipLabel>
         <relationshipName>Successor_Tasks</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -336,7 +320,6 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -368,7 +351,7 @@
         <relationshipLabel>Tasks</relationshipLabel>
         <relationshipName>Project_Tasks</relationshipName>
         <relationshipOrder>0</relationshipOrder>
-        <trackFeedHistory>false</trackFeedHistory>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
@@ -396,7 +379,6 @@
         <inlineHelpText>When should this task start by?</inlineHelpText>
         <label>Start Date</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
     </fields>
     <fields>
@@ -434,7 +416,6 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -465,7 +446,6 @@
     </listViews>
     <nameField>
         <label>Project Task Name</label>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
     </nameField>
     <namedFilters>
